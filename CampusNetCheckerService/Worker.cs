@@ -31,6 +31,7 @@ namespace CampusNetCheckerService
                 try
                 {
                     await _cnService.FetchLimitedPassword(_config["CN:Username"], _config["CN:Password"]);
+                    await _errorService.ReportSuccess();
                 }
                 catch (Exception ex)
                 {
